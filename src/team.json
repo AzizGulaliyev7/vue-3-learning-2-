@@ -1,0 +1,31 @@
+{
+  "name": "Smiley",
+  "spots": 5,
+  "members": [
+    {
+      "name": "John doe",
+      "email": "johndoe@gmail.com",
+      "status": "Active"
+    },
+    {
+      "name": "Sarah doe",
+      "email": "sarahdoe@gmail.com",
+      "status": "Active"
+    },
+    {
+      "name": "Stave doe",
+      "email": "stavedoe@gmail.com",
+      "status": "Active"
+    },
+    {
+      "name": "Jen doe",
+      "email": "jendoe@gmail.com",
+      "status": "Inactive"
+    },
+    {
+      "name": "Joe doe",
+      "email": "joedoe@gmail.com",
+      "status": "Active"
+    }
+  ]
+}
