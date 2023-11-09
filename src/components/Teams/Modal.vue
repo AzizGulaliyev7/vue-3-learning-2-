@@ -5,23 +5,25 @@
 </script>
 
 <template>
-  <div v-if="show" class="modal-mask">
-    <div class="modal-container">
-      <div>
-        <slot>
-          defaultBody
-        </slot>
-      </div>
+  <Transition name="modal">
+    <div v-if="show" class="modal-mask">
+      <div class="modal-container">
+        <div>
+          <slot>
+            defaultBody
+          </slot>
+        </div>
 
-      <footer class="modal-footer">
-        <slot name="footer">
-          <button @click="$emit('close')">
-            Close
-          </button>
-        </slot>
-      </footer>
+        <footer class="modal-footer">
+          <slot name="footer">
+            <button @click="$emit('close')">
+              Close
+            </button>
+          </slot>
+        </footer>
+      </div>
     </div>
-  </div>
+  </Transition>
 </template>
 
 <style scoped>
@@ -56,5 +58,17 @@
 
   .modal-footer button:hover {
     background: #bfbfbf;
+  }
+
+  .modal-enter-active, .modal-leave-active {
+    transition: opacity 1s;
+  }
+
+  .modal-enter-from, .modal-leave-to {
+    opacity: 0;
+  }
+
+  .modal-enter-to, .modal-leave-from {
+    opacity: 100;
   }
 </style>
